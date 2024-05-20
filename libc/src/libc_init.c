@@ -47,7 +47,7 @@ typedef struct {
 
 #define LIBPATH_MAX 256
 
-const char libpath[] = "/sys/lib/";
+static const char libpath[] = "/sys/lib/";
 
 __attribute__((noreturn)) static void libc_init(void)
 {
