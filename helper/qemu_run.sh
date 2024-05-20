@@ -10,7 +10,7 @@ if [ ! -e "$IMG" ]; then
     exit
 fi
 
-mcopy -D o -i $IMG ../sources/libc.obj ::lib/libc.obj
+mcopy -D o -i $IMG ../lib/libc.obj ::lib/libc.obj
 mcopy -D o -i $IMG test ::test
 
 echo -e "Files added!\r"
