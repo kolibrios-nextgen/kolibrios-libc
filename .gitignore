@@ -1,2 +1,5 @@
 .tup
-old/*
+*.o
+*.a
+*.obj
+libc/src/export.c
