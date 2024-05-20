@@ -76,16 +76,17 @@ __attribute__((noreturn)) static void libc_init(void)
             pe_import_by_name_t *record = (pe_import_by_name_t *)ilt->address_of_data;
             uintptr_t func_ptr = (uintptr_t)_ksys_dlsym(coff_dll, record->name);
 
-            if (func_ptr) {
-                iat->function = func_ptr;
+            if (!func_ptr) {
                 /* TODO: Replace to sprintf() */
                 _ksys_debug_puts("Unresolved import '");
                 _ksys_debug_puts(record->name);
                 _ksys_debug_puts("' from ");
-                _ksys_debug_puts(libpath);
+                _ksys_debug_puts(path);
                 _ksys_debug_putc('\n');
                 goto exit;
             }
+
+            iat->function = func_ptr;
 
             iat++;
             ilt++;
