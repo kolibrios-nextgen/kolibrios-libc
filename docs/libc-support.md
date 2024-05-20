@@ -164,10 +164,10 @@
 | `strtoul()` | Converts the string pointed to, by the argument str to an unsigned long integer (type unsigned long int). | Yes |
 | `rand()` | Returns a pseudo-random number in the range of 0 to `RAND_MAX`. | Yes |
 | `srand()` | This function seeds the random number generator used by the function rand. | Yes |
-| `calloc()` | Allocates the requested memory and returns a pointer to it. | Not implemented |
-| `free()` | Deallocates the memory previously allocated by a call to calloc, malloc, or realloc. | Not implemented |
-| `malloc()` | Allocates the requested memory and returns a pointer to it. | Not implemented |
-| `realloc()` | Attempts to resize the memory block pointed to by ptr that was previously allocated with a call to malloc or calloc. | Not implemented |
+| `calloc()` | Allocates the requested memory and returns a pointer to it. | Yes |
+| `free()` | Deallocates the memory previously allocated by a call to calloc, malloc, or realloc. | Yes |
+| `malloc()` | Allocates the requested memory and returns a pointer to it. | Yes |
+| `realloc()` | Attempts to resize the memory block pointed to by ptr that was previously allocated with a call to malloc or calloc. | Yes |
 | `abort()` | Causes an abnormal program termination. | Not implemented |
 | `atexit()` | Causes the specified function to be called when the program terminates normally. | Not implemented |
 | `exit()` | Causes the program to terminate normally. | Not implemented |

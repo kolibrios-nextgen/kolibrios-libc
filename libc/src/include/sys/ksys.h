@@ -2,6 +2,7 @@
 #define _KSYS_H_
  
 /* Copyright (C) KolibriOS team 2004-2021. All rights reserved. */
+/* Copyright (C) KolibriOS-NG team 2024. All rights reserved. */
 /* Distributed under terms of the GNU General Public License    */
  
 /* This file contains basic wrappers over KolibriOS system calls. */
@@ -1332,7 +1333,9 @@ KOSAPI void _ksys_thread_yield(void)
 }
  
 /*======== Function 68, subfunction 12 - allocate memory block. ========*/
- 
+
+#define KSYS_PAGE_SIZE 4096
+
 KOSAPI void* _ksys_alloc(size_t size)
 {
     void* val;

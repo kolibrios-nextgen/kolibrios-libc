@@ -35,6 +35,10 @@ abs
 div
 labs
 ldiv
+malloc
+calloc
+realloc
+free
 
 memcpy
 memmove
@@ -55,3 +59,4 @@ strrchr
 strspn
 strstr
 strtok
+strlen

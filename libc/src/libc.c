@@ -12,6 +12,7 @@ static int __errno;
 #include "ctype.c"
 #include "string.c"
 #include "stdlib.c"
+#include "liballoc.c"
 
 #include "libc_init.c"
 
