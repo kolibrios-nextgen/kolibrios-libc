@@ -1,6 +1,8 @@
 LIBRARY libc.obj
 
 EXPORTS
+libc_init
+
 __errno
 
 isalnum
