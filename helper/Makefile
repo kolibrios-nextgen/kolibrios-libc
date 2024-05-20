@@ -3,7 +3,7 @@ LD = i686-w64-mingw32-ld
 OBJCOPY = i686-w64-mingw32-objcopy
 KPACK = kpack
 
-CFLAGS = -I../include -nostdinc -c -Os \
+CFLAGS = -I../libc/src/include -nostdinc -c -Os \
 	 -fno-builtin -fno-ident -fomit-frame-pointer -ffreestanding -fno-leading-underscore \
 	 -fno-stack-check -fno-stack-protector -mno-stack-arg-probe -fno-exceptions \
 	 -fno-asynchronous-unwind-tables -ffast-math
