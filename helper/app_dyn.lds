@@ -100,7 +100,7 @@ SECTIONS
         ___cmdline = .;
         . = . + 256;
         ___pgmname = .;
-        . = . + 1024 + 16;
+        . = . + 1024*64 + 16;
         ___stacktop = .;
         ___memsize = . ;
    }
