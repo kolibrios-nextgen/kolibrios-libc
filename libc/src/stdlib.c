@@ -1,6 +1,9 @@
 /*
- * Copyright (C) KolibriOS team 2022-2024. All rights reserved.
- * Distributed under terms of the GNU General Public License
+ * SDPX-FileCopyrightText: 1994 DJ Delorie
+ * SPDX-FileCopyrightText: 2002 Manuel Novoa III
+ * SPDX-FileCopyrightText: 2022-2024 KolibriOS team
+ * SPDX-FileCopyrightText: 2024 KolibriOS-NG Team
+ * SPDX-License-Identifier: GPL-2.0-only
  */
 
 #include <ctype.h>
@@ -303,4 +306,77 @@ div_t div(int num, int den)
 ldiv_t ldiv(long num, long den)
 {
     return (ldiv_t) { num / den, num % den };
+}
+
+void *bsearch(const void *key,
+    const void *base0,
+    size_t nelem,
+    size_t size,
+    int (*cmp)(const void *ck, const void *ce))
+{
+    char *base = unconst(base0, char *);
+    int lim, cmpval;
+    void *p;
+
+    for (lim = nelem; lim != 0; lim >>= 1) {
+        p = base + (lim >> 1) * size;
+        cmpval = (*cmp)(key, p);
+        if (cmpval == 0)
+            return p;
+        if (cmpval > 0) { /* key > p: move right */
+            base = (char *)p + size;
+            lim--;
+        } /* else move left */
+    }
+
+    return 0;
+}
+
+void qsort(void *base,
+    size_t nel,
+    size_t width,
+    int (*compar)(const void *, const void *))
+{
+    size_t wgap, i, j, k;
+    char tmp;
+
+    if ((nel > 1) && (width > 0)) {
+#if 0
+        TODO: enable assert?
+        assert(nel <= ((size_t)(-1)) / width); /* check for overflow */
+#endif
+        wgap = 0;
+        do {
+            wgap = 3 * wgap + 1;
+        } while (wgap < (nel - 1) / 3);
+        /* From the above, we know that either wgap == 1 < nel or */
+        /* ((wgap-1)/3 < (int) ((nel-1)/3) <= (nel-1)/3 ==> wgap <  nel. */
+        wgap *= width; /* So this can not overflow if wnel doesn't. */
+        nel *= width;  /* Convert nel to 'wnel' */
+        do {
+            i = wgap;
+            do {
+                j = i;
+                do {
+                    register char *a;
+                    register char *b;
+
+                    j -= wgap;
+                    a = j + ((char *)base);
+                    b = a + wgap;
+                    if ((*compar)(a, b) <= 0) {
+                        break;
+                    }
+                    k = width;
+                    do {
+                        tmp = *a;
+                        *a++ = *b;
+                        *b++ = tmp;
+                    } while (--k);
+                } while (j >= wgap);
+                i += width;
+            } while (i < nel);
+            wgap = (wgap - width) / 3;
+        } while (wgap);
+    }
 }

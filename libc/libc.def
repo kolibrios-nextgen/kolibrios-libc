@@ -39,6 +39,8 @@ malloc
 calloc
 realloc
 free
+bsearch
+qsort
 
 memcpy
 memmove

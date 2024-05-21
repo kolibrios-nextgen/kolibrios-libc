@@ -179,8 +179,8 @@ Below is a list of supported functionality.
 | `exit()` | Causes the program to terminate normally. | Not implemented |
 | `getenv()` | Searches for the environment string pointed to by name and returns the associated value to the string. | Not implemented |
 | `system()` | The command specified by string is passed to the host environment to be executed by the command processor. | Not implemented |
-| `bsearch()` | Performs a binary search. | Not implemented |
-| `qsort()` | Sorts an array. | Not implemented |
+| `bsearch()` | Performs a binary search. | Yes |
+| `qsort()` | Sorts an array. | Yes |
 | `abs()` | Returns the absolute value of x. | Yes |
 | `div()` | Divides numerator by denominator. | Yes |
 | `labs()` | Returns the absolute value of x. | Yes |
