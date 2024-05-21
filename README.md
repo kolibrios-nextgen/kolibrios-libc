@@ -214,7 +214,7 @@ Below is a list of supported functionality.
 | `strtok()` | Breaks string str into a series of tokens separated by delim. | Yes |
 | `memset()` | Copies the character c (an unsigned char) to the first n characters of the string pointed to, by the argument str. | Yes |
 | `strerror()` | Searches an internal array for the error number errnum and returns a pointer to an error message string. | Yes[^strerror] |
-| `strlen()` | Computes the length of the string str up to but not including the terminating null character. | Not implemented |
+| `strlen()` | Computes the length of the string str up to but not including the terminating null character. | Yes |
 | **time.h** |  |  |
 | `CLK_TCK` | This macro represents the number of processor clocks per second. | Yes |
 | `NULL` | This macro is the value of a null pointer constant. | Yes |
