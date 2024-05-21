@@ -1,4 +1,10 @@
-﻿### ANSI C Support in KolibriOS
+﻿# NativLibc
+
+NativLibc is a native, small standard C library for KolibriOS-NG.
+
+Below is a list of supported functionality.
+
+## ANSI C (C89)
 | Name | Description | Support |
 |--|--|--|
 | **errno.h** |  |  |
@@ -248,6 +254,5 @@
 
 [^locale_h]: `locale.h` is not supported due to redundancy and further complexity of the code.
 [^signal_h]: `signal.h` is not supported. KolibriOS does not support any signals.
-[^strcoll]: `locale.h` is not supported, but does not depend on `LC_COLLATE`, alias ​​to `strcmp()`.
-[^strerror]: Implemented, what is in the ANSI C, but needs to be implemented for KolibriOS errors.
-
+[^strcoll]: alias ​​to `strcmp()`, `LC_COLLATE`,
+[^strerror]: Implemented, what is in the ANSI C, but needs to be implemented for KolibriOS-NG errors.
