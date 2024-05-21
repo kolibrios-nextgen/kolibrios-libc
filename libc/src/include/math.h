@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#define HUGE_VAL (__builtin_huge_val())
+
 /* Trig functions */
 DLLAPI double sin(double x);
 DLLAPI double cos(double x);

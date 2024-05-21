@@ -46,29 +46,29 @@ Below is a list of supported functionality.
 | `setlocale()` | Sets or reads location dependent information. | No |
 | `localeconv()` | Sets or reads location dependent information. | No |
 | **math.h** |  |  |
-| `HUGE_VAL` | This macro is used when the result of a function may not be representable as a floating point number. | Not implemented |
-| `acos()` | Returns the arc cosine of x in radians. | Not implemented |
-| `asin()` | Returns the arc sine of x in radians. | Not implemented |
-| `atan()` | Returns the arc tangent of x in radians. | Not implemented |
-| `atan2()` | Returns the arc tangent in radians of y/x based on the signs of both values to determine the correct quadrant. | Not implemented |
-| `cos()` | Returns the cosine of a radian angle x. | Not implemented |
-| `sin()` | Returns the sine of a radian angle x. | Not implemented |
-| `tan()` | Returns the tangent of x. | Not implemented |
-| `cosh()` | Returns the hyperbolic cosine of x. | Not implemented |
-| `sinh()` | Returns the hyperbolic sine of x. | Not implemented |
-| `tanh()` | Returns the hyperbolic tangent of x. | Not implemented |
-| `exp()` | Returns the value of e raised to the xth power. | Not implemented |
-| `frexp()` | The returned value is the mantissa and the integer pointed to by exponent is the exponent. The resultant value is x = mantissa * 2 ^ exponent. | Not implemented |
-| `ldexp()` | Returns x multiplied by 2 raised to the power of exponent. | Not implemented |
-| `log()` | Returns the natural logarithm (base-e logarithm) of x. | Not implemented |
-| `log10()` | Returns the common logarithm (base-10 logarithm) of x. | Not implemented |
-| `modf()` | The returned value is the fraction component (part after the decimal), and sets integer to the integer component. | Not implemented |
-| `pow()` | Returns x raised to the power of y. | Not implemented |
-| `sqrt()` | Returns the square root of x. | Not implemented |
-| `ceil()` | Returns the smallest integer value greater than or equal to x. | Not implemented |
-| `fabs()` | Returns the absolute value of x. | Not implemented |
-| `floor()` | Returns the largest integer value less than or equal to x. | Not implemented |
-| `fmod()` | Returns the remainder of x divided by y. | Not implemented |
+| `HUGE_VAL` | This macro is used when the result of a function may not be representable as a floating point number. | Yes |
+| `acos()` | Returns the arc cosine of x in radians. | Yes |
+| `asin()` | Returns the arc sine of x in radians. | Yes |
+| `atan()` | Returns the arc tangent of x in radians. | Yes |
+| `atan2()` | Returns the arc tangent in radians of y/x based on the signs of both values to determine the correct quadrant. | Yes |
+| `cos()` | Returns the cosine of a radian angle x. | Yes |
+| `sin()` | Returns the sine of a radian angle x. | Yes |
+| `tan()` | Returns the tangent of x. | Yes |
+| `cosh()` | Returns the hyperbolic cosine of x. | Yes |
+| `sinh()` | Returns the hyperbolic sine of x. | Yes |
+| `tanh()` | Returns the hyperbolic tangent of x. | Yes |
+| `exp()` | Returns the value of e raised to the xth power. | Yes |
+| `frexp()` | The returned value is the mantissa and the integer pointed to by exponent is the exponent. The resultant value is x = mantissa * 2 ^ exponent. | Yes |
+| `ldexp()` | Returns x multiplied by 2 raised to the power of exponent. | Yes |
+| `log()` | Returns the natural logarithm (base-e logarithm) of x. | Yes |
+| `log10()` | Returns the common logarithm (base-10 logarithm) of x. | Yes |
+| `modf()` | The returned value is the fraction component (part after the decimal), and sets integer to the integer component. | Yes |
+| `pow()` | Returns x raised to the power of y. | Yes |
+| `sqrt()` | Returns the square root of x. | Yes |
+| `ceil()` | Returns the smallest integer value greater than or equal to x. | Yes |
+| `fabs()` | Returns the absolute value of x. | Yes |
+| `floor()` | Returns the largest integer value less than or equal to x. | Yes |
+| `fmod()` | Returns the remainder of x divided by y. | Yes |
 | **setjmp.h** |  |  |
 | `jmp_buf` | This is an array type used for holding information for macro `setjmp` and function `longjmp()`. | Yes |
 | `setjmp` | This macro saves the current environment into the variable environment for later use by the function `longjmp()`. | Yes |

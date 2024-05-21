@@ -13,12 +13,14 @@ static int __errno;
 #include "string.c"
 #include "stdlib.c"
 #include "liballoc.c"
+#include "math.c"
 
 #include "libc_init.c"
 
 __asm__(
     ".include \"setjmp.s\"\n\t"
     ".include \"string.s\"\n\t"
+    ".include \"math.s\"\n\t"
 );
 
 #include "export.c"
